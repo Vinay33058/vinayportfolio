@@ -58,7 +58,6 @@ body {
     width: 100%;
     justify-content: space-between;
     height: 100vh;
-    /* background: url(plufow-le.jpg)no-repeat; */
     background-size: cover;
     background-position: center;
     display: flex;
@@ -137,11 +136,17 @@ body {
 
 }
 
+.img-b img {
+    border: 10px solid rgb(216, 246, 199);
+    border-radius: 27px;
+    box-shadow: 0 0 1500px rgb(93, 169, 27);
+    border-color: rgb(163, 160, 160);
+}
+
 .about-img img {
 
     display: flex;
-    border: 10px solid rgb(216, 246, 199);
-    border-radius: 70px;
+    border: 10px solid rgb(171, 177, 167);
     box-shadow: 0 0 1500px rgb(93, 169, 27);
     padding-bottom: 20px;
     margin-left: 100px;
@@ -149,7 +154,7 @@ body {
     max-width: 350px;
     height: auto;
     width: 100%;
-    border-radius: 180px;
+    border-radius: 62px;
 
 }
 
@@ -159,7 +164,7 @@ body {
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     gap: 2rem;
-    
+
 }
 
 .about-text h2 {
@@ -185,61 +190,187 @@ body {
     line-height: 1.4;
     margin-bottom: 4rem;
 }
-#services{
+
+#services {
     color: aliceblue;
     font-size: 20px;
     line-height: 1.4;
     margin-bottom: 4rem;
 }
-.sub-title{
+
+.sub-title {
     text-align: center;
     font-size: 60px;
     padding-bottom: 70px;
 }
-.sub-title span{
+
+.sub-title span {
     color: rgb(22, 214, 150);
 }
-.container{
+
+.container {
     padding: 90px;
 }
-.services-list{
+
+.services-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(259px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(259px, 1fr));
     grid-gap: 40px;
     margin-top: 50px;
 }
-.services-list div{
+
+.services-list div {
     background-color: transparent;
     padding: 40px;
     font-size: 13px;
     font-weight: 13px;
     border-right: 10px;
-    transition: background 0.5s,transform 0.5s;
+    transition: background 0.5s, transform 0.5s;
     box-shadow: 1px 1px 20px #8b6aef,
-                1px 1px 40px #8b6aef
+        1px 1px 40px #8b6aef
 }
-.services-list div i{
+
+.services-list div i {
     font-size: 50px;
     margin-bottom: 30px;
 }
-.services-list div h2{
+
+.services-list div h2 {
     font-size: 30px;
     font-weight: 500;
     margin-bottom: 15px;
 }
-.services-list div a{
+
+.services-list div a {
     text-decoration: none;
     color: rgb(11, 11, 11);
     font-size: 20px;
     margin-top: 20px;
     display: inline-block;
 }
-.read{
+
+.read {
     display: inline-block;
     padding: 20px 28px;
-     background: #52c3ed;
+    background: #52c3ed;
+    border-radius: 40px;
+    font-size: 12px;
+    color: #8b6aef;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 2s;
+    box-shadow: 0 0 5px #0ef,
+        0 0 25px #0ef;
 }
 
+.read:hover {
+    background: #0ef;
+    color: black;
+    box-shadow: 0 0 20px #0ef;
+
+}
+.services-list div:hover{
+    transform: translateY(-10px);
+}
+.section{
+    display: flex;
+    flex-wrap: wrap;
+}
+.container1{
+    width: 600px;
+    height: 500px;
+    padding: 75px 90px;
+    margin-left: 120px;
+   
+    
+}
+
+.heading1{
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 5px;
+    margin-bottom: 50px;
+}
+.bar{
+    font-size: 23px;
+}
+.Technical-bars .bar{
+    margin-top: 40px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+.Technical-bars .bar:first-child{
+    margin-top: 0;
+}
+.Technical-bars .bar:last-child{
+    margin-bottom: 0;
+}
+.Technical-bars .bar .info{
+    margin-bottom: 5px;
+}
+.Technical-bars .bar .info span{
+    font-size: 17px;
+    font-weight: 500;
+    animation: showtext 0.5s 1s linear forwards;
+    opacity: 0;
+}
+.Technical-bars .bar .progress-line{
+    position: relative;
+    border-radius: 10px;
+    width: 100%;
+    height: 5px;
+    background-color: #000000;
+    animation: animate 1s cubic-bezier(1,0,0,5,1) forwards;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+@keyframes animate{
+    100%{
+        transform: scaleX(1);
+    }
+}
+.Technical-bars .bar .progress-line span{
+    height: 100%;
+    background-color: #0ef;
+    position: absolute;
+    border-radius: 10px;
+    animation: animate 1s cubic-bezier(1,0,0,5,1) forwards;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+.progress-line html span{
+    width: 90%;
+}
+.progress-line css span{
+    width: 60%;
+}
+.progress-line Javascript span{
+    width: 85%;
+}
+.progress-line Python span{
+    width: 50%;
+}
+.progress-line React span{
+    width: 75%;
+}
+.progress-line span::after{
+    position: absolute;
+    padding: 1px 8px;
+    background-color: #000;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 3px;
+    top: -28px;
+    right: -20px;
+    animation: showtext 0.5s 1.5s linear forwards;
+    opacity: 0;
+}
 
 
 
@@ -284,4 +415,8 @@ body {
         transform: translateY(0px);
         opacity: 1;
     }
+}
+.profileimage:hover{
+    transition: all 0.1rem ease;
+    transform: translateY(-2rem);
 }
