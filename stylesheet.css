@@ -272,94 +272,112 @@ body {
     box-shadow: 0 0 20px #0ef;
 
 }
-.services-list div:hover{
+
+.services-list div:hover {
     transform: translateY(-10px);
 }
-.section{
+
+.section {
     display: flex;
     flex-wrap: wrap;
 }
-.container1{
+
+.container1 {
     width: 600px;
     height: 500px;
     padding: 75px 90px;
     margin-left: 120px;
-   
-    
+
+
 }
 
-.heading1{
+.heading1 {
     text-align: center;
     text-decoration: underline;
     text-underline-offset: 10px;
     text-decoration-thickness: 5px;
     margin-bottom: 50px;
 }
-.bar{
+
+.bar {
     font-size: 23px;
 }
-.Technical-bars .bar{
+
+.Technical-bars .bar {
     margin-top: 40px 0;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
 }
-.Technical-bars .bar:first-child{
+
+.Technical-bars .bar:first-child {
     margin-top: 0;
 }
-.Technical-bars .bar:last-child{
+
+.Technical-bars .bar:last-child {
     margin-bottom: 0;
 }
-.Technical-bars .bar .info{
+
+.Technical-bars .bar .info {
     margin-bottom: 5px;
 }
-.Technical-bars .bar .info span{
+
+.Technical-bars .bar .info span {
     font-size: 17px;
     font-weight: 500;
     animation: showtext 0.5s 1s linear forwards;
     opacity: 0;
 }
-.Technical-bars .bar .progress-line{
+
+.Technical-bars .bar .progress-line {
     position: relative;
     border-radius: 10px;
     width: 100%;
     height: 5px;
     background-color: #000000;
-    animation: animate 1s cubic-bezier(1,0,0,5,1) forwards;
+    animation: animate 1s cubic-bezier(1, 0, 0, 5, 1) forwards;
     transform: scaleX(0);
     transform-origin: left;
 }
-@keyframes animate{
-    100%{
+
+@keyframes animate {
+    100% {
         transform: scaleX(1);
     }
 }
-.Technical-bars .bar .progress-line span{
+
+.Technical-bars .bar .progress-line span {
     height: 100%;
     background-color: #0ef;
     position: absolute;
     border-radius: 10px;
-    animation: animate 1s cubic-bezier(1,0,0,5,1) forwards;
+    animation: animate 1s cubic-bezier(1, 0, 0, 5, 1) forwards;
     transform: scaleX(0);
     transform-origin: left;
 }
-.progress-line html span{
+
+.progress-line html span {
     width: 90%;
 }
-.progress-line css span{
+
+.progress-line css span {
     width: 60%;
 }
-.progress-line Javascript span{
+
+.progress-line Javascript span {
     width: 85%;
 }
-.progress-line Python span{
+
+.progress-line Python span {
     width: 50%;
 }
-.progress-line React span{
+
+.progress-line React span {
     width: 75%;
 }
-.progress-line span::after{
+
+.progress-line span::after {
     position: absolute;
     padding: 1px 8px;
     background-color: #000;
@@ -371,11 +389,6 @@ body {
     animation: showtext 0.5s 1.5s linear forwards;
     opacity: 0;
 }
-
-
-
-
-
 
 
 
@@ -416,7 +429,35 @@ body {
         opacity: 1;
     }
 }
-.profileimage:hover{
+
+.profileimage:hover {
     transition: all 0.1rem ease;
     transform: translateY(-2rem);
+}
+
+.skill-section {
+    text-align: center;
+    font-size: 60px;
+    padding-bottom: 70px;
+
+}
+
+.skill-main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25px, 1fr));
+    grid-row-gap: 30px;
+    grid-column-gap: 50px;
+    padding: 50px;
+    margin: 100px;
+    
+}
+
+.skill-bar {
+    margin-bottom: 2.3rem;
+}
+
+.skill-main h4 {
+    margin-bottom: 2rem;
+    font-size: 30px;
+    text-align: center;
 }
