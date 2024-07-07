@@ -206,6 +206,7 @@ body {
 
 .sub-title span {
     color: rgb(22, 214, 150);
+    text-shadow: 3px 3px #8976bf;
 }
 
 .container {
@@ -277,123 +278,6 @@ body {
     transform: translateY(-10px);
 }
 
-.section {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.container1 {
-    width: 600px;
-    height: 500px;
-    padding: 75px 90px;
-    margin-left: 120px;
-
-
-}
-
-.heading1 {
-    text-align: center;
-    text-decoration: underline;
-    text-underline-offset: 10px;
-    text-decoration-thickness: 5px;
-    margin-bottom: 50px;
-}
-
-.bar {
-    font-size: 23px;
-}
-
-.Technical-bars .bar {
-    margin-top: 40px 0;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.Technical-bars .bar:first-child {
-    margin-top: 0;
-}
-
-.Technical-bars .bar:last-child {
-    margin-bottom: 0;
-}
-
-.Technical-bars .bar .info {
-    margin-bottom: 5px;
-}
-
-.Technical-bars .bar .info span {
-    font-size: 17px;
-    font-weight: 500;
-    animation: showtext 0.5s 1s linear forwards;
-    opacity: 0;
-}
-
-.Technical-bars .bar .progress-line {
-    position: relative;
-    border-radius: 10px;
-    width: 100%;
-    height: 5px;
-    background-color: #000000;
-    animation: animate 1s cubic-bezier(1, 0, 0, 5, 1) forwards;
-    transform: scaleX(0);
-    transform-origin: left;
-}
-
-@keyframes animate {
-    100% {
-        transform: scaleX(1);
-    }
-}
-
-.Technical-bars .bar .progress-line span {
-    height: 100%;
-    background-color: #0ef;
-    position: absolute;
-    border-radius: 10px;
-    animation: animate 1s cubic-bezier(1, 0, 0, 5, 1) forwards;
-    transform: scaleX(0);
-    transform-origin: left;
-}
-
-.progress-line html span {
-    width: 90%;
-}
-
-.progress-line css span {
-    width: 60%;
-}
-
-.progress-line Javascript span {
-    width: 85%;
-}
-
-.progress-line Python span {
-    width: 50%;
-}
-
-.progress-line React span {
-    width: 75%;
-}
-
-.progress-line span::after {
-    position: absolute;
-    padding: 1px 8px;
-    background-color: #000;
-    color: #fff;
-    font-size: 12px;
-    border-radius: 3px;
-    top: -28px;
-    right: -20px;
-    animation: showtext 0.5s 1.5s linear forwards;
-    opacity: 0;
-}
-
-
-
-
-
 
 
 
@@ -441,23 +325,106 @@ body {
     padding-bottom: 70px;
 
 }
+.skill-section span{
+    color: #0cc0d7;
+    text-shadow: 3px 3px grey;
+
+}
+.skill-section h2{
+    color: #8976bf;
+    text-shadow: 2px 2px rgb(231, 168, 202);
+}
 
 .skill-main {
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25px, 1fr));
     grid-row-gap: 30px;
     grid-column-gap: 50px;
-    padding: 50px;
-    margin: 100px;
+    padding: 0px;
+    margin: 8px;
     
 }
-
+    
 .skill-bar {
     margin-bottom: 2.3rem;
+    position: relative;
 }
 
 .skill-main h4 {
     margin-bottom: 2rem;
-    font-size: 30px;
+    font-size: 50px;
     text-align: center;
+    color: rgb(196, 133, 133);;
+    text-shadow: 1px 2px grey;
+    
 }
+.skill-left .skill-bar .info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px;
+
+}
+.skill-main p{
+    font-size: 25px;
+}
+.skill-left .skill-bar .bar{
+    width: 100%;
+    height: 10px;
+    background-color: var(--bg-color);
+    border-radius: 23px;
+    margin-top: 10px;
+    position: relative;
+}
+.skill-bar .bar span{
+    width: 50%;
+    height: 100%;
+    position: absolute;
+
+}
+
+.mainline{
+    height: 13px;
+    width: 730px;
+    border: 2px;
+    background-color: #fbf7f7;
+    border-radius: 8px;
+}
+
+.subline{
+    height: 13px;
+    border: 2px;
+    background-color: #0dede5;
+    border-radius: 12px; 
+}
+
+@keyframes htmlfillBar {
+    from { width: 0%; }
+    to { width: 72%; }
+  }
+  @keyframes cssfillBar {
+    from { width: 0%; }
+    to { width: 90%; }
+  }
+  @keyframes javascriptfillBar {
+    from { width: 0%; }
+    to { width: 65%; }
+  }
+  @keyframes angularfillBar {
+    from { width: 0%; }
+    to { width: 55%; }
+  }
+  .html{
+    animation: htmlfillBar 2s forwards; 
+  }
+  .css{
+    animation: cssfillBar 2s forwards; 
+  }
+  .javascript{
+    animation: javascriptfillBar 2s forwards; 
+  }
+  .angular{
+    animation: angularfillBar 2s forwards; 
+  }
+  
